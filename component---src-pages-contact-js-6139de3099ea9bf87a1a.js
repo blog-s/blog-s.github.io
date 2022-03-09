@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{"Cuy+":function(e,n,t){"use strict";t.r(n);var a=t("q1tI"),c=t.n(a),o=t("Bl7J"),r=t("vrFN");n.default=function(){return c.a.createElement(o.a,null,c.a.createElement(r.a,{title:"Contact Jonny Acevedo"}),"Contact Me")}}}]);
+//# sourceMappingURL=component---src-pages-contact-js-6139de3099ea9bf87a1a.js.map

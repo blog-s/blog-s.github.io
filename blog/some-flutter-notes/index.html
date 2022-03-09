@@ -1,0 +1,681 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><link href="/styles.e6bbfc168074d5aadce1.css" rel="stylesheet" type="text/css"/><meta name="generator" content="Gatsby 2.21.21"/><link data-styled="" data-styled-version="5.1.0" rel="stylesheet" type="text/css"/><title data-react-helmet="true">Some Flutter Notes | Front-end Developer</title><meta data-react-helmet="true" name="description" content="Front-end Developer &amp;amp; Android/Flutter Enthusiastic"/><meta data-react-helmet="true" property="og:title" content="Some Flutter Notes"/><meta data-react-helmet="true" property="og:description" content="Front-end Developer &amp;amp; Android/Flutter Enthusiastic"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:creator" content="JonnyAcevedo.com"/><meta data-react-helmet="true" name="twitter:title" content="Some Flutter Notes"/><meta data-react-helmet="true" name="twitter:description" content="Front-end Developer &amp;amp; Android/Flutter Enthusiastic"/><link rel="preconnect" href="https://www.google-analytics.com"/><link rel="dns-prefetch" href="https://www.google-analytics.com"/><link rel="icon" href="/favicon-32x32.png?v=fec07b293b8ee3978a3329802599bb5c"/><link rel="manifest" href="/manifest.webmanifest"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=fec07b293b8ee3978a3329802599bb5c"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=fec07b293b8ee3978a3329802599bb5c"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=fec07b293b8ee3978a3329802599bb5c"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=fec07b293b8ee3978a3329802599bb5c"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=fec07b293b8ee3978a3329802599bb5c"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=fec07b293b8ee3978a3329802599bb5c"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=fec07b293b8ee3978a3329802599bb5c"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=fec07b293b8ee3978a3329802599bb5c"/><link as="script" rel="preload" href="/webpack-runtime-70424c2a5e394e63a2fa.js"/><link as="script" rel="preload" href="/framework-3c607a9ab5a1c641bbca.js"/><link as="script" rel="preload" href="/styles-a8d7dafea8d6423ec243.js"/><link as="script" rel="preload" href="/app-1ca532f105f5f342d7a2.js"/><link as="script" rel="preload" href="/commons-f30d36c3b5dd7c437f7b.js"/><link as="script" rel="preload" href="/component---src-layouts-blog-post-js-1a46acb6dcb05e9a30a1.js"/><link as="fetch" rel="preload" href="/page-data/blog/some-flutter-notes/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="undefined layout-container"><header class="header sticky top-0 z-10 pt-2 pb-3 bg-gray-900 h-12 shadow-xl "><div class="header__container container max-w-screen-lg px-4 flex justify-between"><h1 class="header__logo m-0 font-thin leading-none"><a class="hover:no-underline" href="/">Jonny <span class="text-white font-semibold">Acevedo</span></a></h1><img src="https://res.cloudinary.com/dl8ynwaiu/image/upload/v1587906075/portfolio/hamburguer-white_tyy3pk.svg" alt="Hamburguer Menu White" class="block md:hidden m-0"/><nav class="header__nav hidden md:block md:mt-1 "><ul class="flex"><li><a href="/">Home</a></li><li><a href="/blog">Blog</a></li><li><a href="#contact-me">Contact Me</a></li></ul></nav></div></header><main class="container max-w-screen-lg px-4"><div class="blog-post"><header class="blog-post__headings pt-8 md:pt-12 pb-8"><div class="blog-post__mainCategory"><a href="/blog/category/flutter">Flutter</a></div><h1 class="blog-post__mainHeading my-0 text-3xl md:text-5xl">Some Flutter Notes</h1><h2 class="my-0 text-xl text-gray-400 md:text-2xl">Notes from my learning path to understand flutter</h2></header><div class="blog-post__content font-serif mb-16"><p>Hi everyone, so, these are like personal notes about fundamental things I&#x27;ve been learning about flutter &amp; dart.</p><p>Don&#x27;t take this post to serious, I don&#x27;t expect this blog post to be on page #1 on google, lol, but if you see something wrong on it, I&#x27;ll appreciate it if you <a href="#contact-me">let me know</a>.</p><h2>Create Project</h2><div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript">flutter create my_cool_app</code></pre></div><h2>Run Project</h2><div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript">flutter run
+<span class="token comment">// On VSC</span>
+f5 or debug<span class="token operator">/</span>start debugging</code></pre></div><h2>ShortCodes</h2><div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript">stless <span class="token comment">// Creates a State less widget</span>
+stfull <span class="token comment">// Creates a State full widget</span></code></pre></div><p><strong>Tip:</strong> On VSC, hover the item and see the yellow light, you can see options to do things faster like wrapping images on center widget and so on.</p><h2>Widgets</h2><p><strong>Container()</strong></p><ul><li>It is as big as possible, it takes all the space</li><li>Children will be just its own size, it won&#x27;t take all the width of Container() at least we set it to.</li><li>You can have only one child</li></ul><p><strong>Row(), Column()</strong></p><ul><li>Multiple children with Children()</li><li>Row() stretch horizontally, Column() stretch vertically</li></ul><p><strong>SafeArea()</strong></p><ul><li>Created widget that ovoids operating system interfaces</li></ul><p><strong>Text()</strong></p><ul><li>Simple text widget</li></ul><p><strong>Expanded()</strong></p><ul><li>It has to go under Column, Row or Flex widgets, it takes all the width or height of widget, so child don&#x27;t go outside its parent, Column, Row etc.. it behaves like display flex on development, so, if there two Expanded widgets under a Row, the will have a width of 50%, you can also set a property of flex onside it that behaves kinda the same way as the CSS attribute.</li></ul><p><strong>FlatButton()</strong></p><p><code class="language-text">FlatButton()</code> &amp; <code class="language-text">RaisedButton()</code> -&gt; use <code class="language-text">onPressed:(){ print(&quot;btn was pressed&quot;) }</code></p><p><strong>TextField()</strong>
+<code class="language-text">TextField()</code> works as an input on web, -&gt; use <code class="language-text">onChanged: (value){ print(value); }</code> to get value on change.</p><p><strong>Select/Dropdown</strong>
+The <code class="language-text">DropdownButton()</code> will create a dropdown, <code class="language-text">value</code> needs to be populated so it doesn&#x27;t show and empty box and also needs to be updated with <code class="language-text">onChanged</code> so it gets updated when user change option, also its <code class="language-text">items</code> needs to be populated with <code class="language-text">DropdownMenuItem</code>.</p><p>You can set it to be a <code class="language-text">DropdownButton&lt;String&gt;</code> with type of string, or you can leave it alone to make it dynamic.</p><p><strong>Toast</strong>
+Creating a toast widget with a <code class="language-text">MaterialApp</code> is as easy as:</p><div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js">Scaffold<span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">showSnackBar</span><span class="token punctuation">(</span><span class="token function">SnackBar</span><span class="token punctuation">(</span>
+  content<span class="token operator">:</span> <span class="token function">Text</span><span class="token punctuation">(</span><span class="token string">&quot;My Cool Material Toast&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div><div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token operator">...</span>
+String selectedItem<span class="token punctuation">;</span>
+<span class="token operator">...</span>
+DropdownButton<span class="token operator">&lt;</span>String<span class="token operator">&gt;</span><span class="token punctuation">(</span>
+  value<span class="token operator">:</span> selectedItem<span class="token punctuation">,</span> <span class="token comment">// this is the default value for the Select, without it, it will show an empty box</span>
+  items<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token function">DropdownMenuItem</span><span class="token punctuation">(</span>
+      child<span class="token operator">:</span> <span class="token function">Text</span><span class="token punctuation">(</span><span class="token string">&#x27;My Item 1&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      value<span class="token operator">:</span> <span class="token string">&#x27;Value 1&#x27;</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token function">DropdownMenuItem</span><span class="token punctuation">(</span>
+      child<span class="token operator">:</span> <span class="token function">Text</span><span class="token punctuation">(</span><span class="token string">&#x27;My Item 2&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      value<span class="token operator">:</span> <span class="token string">&#x27;Value 2&#x27;</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token function">DropdownMenuItem</span><span class="token punctuation">(</span>
+      child<span class="token operator">:</span> <span class="token function">Text</span><span class="token punctuation">(</span><span class="token string">&#x27;My Item 3&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      value<span class="token operator">:</span> <span class="token string">&#x27;Value 3&#x27;</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  onChanged<span class="token operator">:</span> <span class="token punctuation">(</span>value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      selectedCurrency <span class="token operator">=</span> value<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span><span class="token punctuation">,</span></code></pre></div><p><strong>GestureDetector()</strong>
+Detect gestures, you can use something like <code class="language-text">onTab:(){ print(&quot;tab&quot;) }</code></p><p><strong>Slider()</strong>
+You can customize the material flutter widgets with the <code class="language-text">ThemeData</code> class, so, for example to customize the slider even further, you can do somthing like:</p><div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token function">SliderTheme</span><span class="token punctuation">(</span>
+  data<span class="token operator">:</span> SliderTheme<span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">copyWith</span><span class="token punctuation">(</span> <span class="token comment">// this to inherith default SliderTheme styles and don&#x27;t have to write all the theme data from scratch</span>
+    thumbColor<span class="token operator">:</span> Colors<span class="token punctuation">.</span>red<span class="token punctuation">,</span>
+    <span class="token operator">...</span>
+  <span class="token punctuation">)</span><span class="token punctuation">,</span>
+  child<span class="token operator">:</span> <span class="token function">Slider</span><span class="token punctuation">(</span>
+    value<span class="token operator">:</span> <span class="token number">110</span><span class="token punctuation">,</span>
+    <span class="token operator">...</span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">)</span></code></pre></div><p><strong>Creating a circular button</strong></p><p>You can create a new custom widget, then extend the RawMaterialButton, and make the sape circular:</p><div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">class</span> <span class="token class-name">RoundIconButton</span> <span class="token keyword">extends</span> <span class="token class-name">StatelessWidget</span> <span class="token punctuation">{</span>
+  <span class="token function">RoundIconButton</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>icon<span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>onPressed<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  final IconData icon<span class="token punctuation">;</span> <span class="token comment">// to get the icon content</span>
+  final Function onPressed<span class="token punctuation">;</span> <span class="token comment">// to get the function to run on onPressed</span>
+  @override
+  Widget <span class="token function">build</span><span class="token punctuation">(</span><span class="token parameter">BuildContext context</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">RawMaterialButton</span><span class="token punctuation">(</span>
+      onPressed<span class="token operator">:</span> onPressed<span class="token punctuation">,</span>
+      child<span class="token operator">:</span> <span class="token function">Icon</span><span class="token punctuation">(</span>icon<span class="token punctuation">)</span><span class="token punctuation">,</span>
+      elevation<span class="token operator">:</span> <span class="token number">6.0</span><span class="token punctuation">,</span> <span class="token comment">// Shadow</span>
+      constraints<span class="token operator">:</span> BoxConstraints<span class="token punctuation">.</span><span class="token function">tightFor</span><span class="token punctuation">(</span> <span class="token comment">// Size of the icon</span>
+        width<span class="token operator">:</span> <span class="token number">56.0</span><span class="token punctuation">,</span>
+        height<span class="token operator">:</span> <span class="token number">56.0</span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+      shape<span class="token operator">:</span> <span class="token function">CircleBorder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token comment">// make it circular</span>
+      fillColor<span class="token operator">:</span> <span class="token function">Color</span><span class="token punctuation">(</span><span class="token number">0xFF4C4F5E</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token comment">// Background of the button</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div><h2>Variables and functions</h2><div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">var</span> myVariable<span class="token punctuation">;</span>
+<span class="token keyword">void</span> <span class="token function">myFunction</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+<span class="token comment">// With Arguments/Input</span>
+<span class="token keyword">void</span> <span class="token function">myFunction</span><span class="token punctuation">(</span><span class="token parameter">int myArgument</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token function">print</span><span class="token punctuation">(</span><span class="token string">&quot;my argument integral is $myArgument&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Functions that allows to send arguments in different</span>
+<span class="token comment">// order than the ones that were in the function itself</span>
+<span class="token function">greet</span><span class="token punctuation">(</span>greeting<span class="token operator">:</span> <span class="token string">&#x27;How do you do&#x27;</span><span class="token punctuation">,</span> personToGreet<span class="token operator">:</span> <span class="token string">&#x27;Jonny&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">void</span> <span class="token function">greet</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span>String personToGreet<span class="token punctuation">,</span> String greeting<span class="token punctuation">}</span></span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">&#x27;$greeting $personToGreet&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// How do you do Jonny</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// `void` functions are functions with not output, if we need a function with output,</span>
+<span class="token comment">// we have to set it to the data type we are going to return, for example:</span>
+<span class="token comment">// int myIntFunction(){ return intVar; }</span>
+<span class="token comment">// String myStringFuction(){ return stringVar; }</span>
+<span class="token comment">// Widget myWidgetFunction(){ return myWidget(); }</span>
+<span class="token comment">// Expanded myExpandedWidgetFunction() { return Expanded(Text(&quot;Hi&quot;)); }</span>
+
+int <span class="token function">myIntFunction</span><span class="token punctuation">(</span><span class="token parameter">int money</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">return</span> money <span class="token operator">-</span> <span class="token number">2</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+int result <span class="token operator">=</span> <span class="token function">myIntFunction</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 1</span>
+
+<span class="token comment">// Arrow Functions</span>
+<span class="token function">myArrowFuction</span><span class="token punctuation">(</span><span class="token parameter">int num1<span class="token punctuation">,</span> int num2</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> num1 <span class="token operator">+</span> num2<span class="token punctuation">;</span>
+</code></pre></div><h2>Data types</h2><p>Dart is a <code class="language-text">Statically typed language</code>, it means you CAN NOT change a variable with values of String to be a number or boolean later if the variable was already declared with a defined data type</p><div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token comment">// Primitive types</span>
+String <span class="token string">&quot;MyVar&quot;</span>
+int <span class="token number">1234</span>
+double <span class="token number">10.2</span>
+boolean <span class="token boolean">true</span> <span class="token operator">/</span> <span class="token boolean">false</span>
+List <span class="token punctuation">[</span> <span class="token punctuation">]</span>
+
+<span class="token comment">// ----</span>
+<span class="token keyword">var</span> a<span class="token punctuation">;</span>
+a <span class="token operator">=</span> <span class="token string">&quot;hello&quot;</span>
+a <span class="token operator">=</span> <span class="token number">1234</span>
+<span class="token function">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span> <span class="token comment">// 1234</span>
+
+<span class="token comment">// you can also set a variable like this</span>
+String stringVar <span class="token operator">=</span> <span class="token string">&quot;Hello&quot;</span><span class="token punctuation">;</span>
+int numberVar <span class="token operator">=</span> <span class="token number">12345</span><span class="token punctuation">;</span>
+dynamic dynamicVar<span class="token punctuation">;</span> <span class="token comment">// it can be any data type</span>
+</code></pre></div><h2>String interpolation</h2><p>use <code class="language-text">$var</code> in the string, also, for situation were you need the interpolation of something like <code class="language-text">myclass.myProperty</code>, you need to use <code class="language-text">${myclass.myProperty}</code></p><div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">&quot;my string with my $variableToBeInterpolated&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">print</span><span class="token punctuation">(</span><span class="token string">&quot;my other string interpolation ${myclass.myProperty}&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div><h2>For loop</h2><div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">for</span><span class="token punctuation">(</span>int i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span><span class="token number">5</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token comment">// Print i, 5 times</span>
+<span class="token punctuation">}</span></code></pre></div><h2>For in loop</h2><div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript">List<span class="token operator">&lt;</span>String<span class="token operator">&gt;</span> fruits <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token string">&#x27;apple&#x27;</span><span class="token punctuation">,</span>
+  <span class="token string">&#x27;pear&#x27;</span><span class="token punctuation">,</span>
+  <span class="token string">&#x27;orange&#x27;</span><span class="token punctuation">,</span>
+  <span class="token string">&#x27;grape&#x27;</span><span class="token punctuation">,</span>
+  <span class="token string">&#x27;banana&#x27;</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token keyword">for</span> <span class="token punctuation">(</span>String fruit <span class="token keyword">in</span> fruits<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token function">print</span><span class="token punctuation">(</span>fruit<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// apple -&gt; pear -&gt; ... banana</span>
+<span class="token punctuation">}</span></code></pre></div><h2>DartPad</h2><p>Use DartPad to run Dart codes on browser to test and so on.</p><h2>StateLess Widget</h2><p>Immutable (unchangable) widget, that doesn&#x27;t change</p><h2>StateFull Widgets</h2><p>Use <code class="language-text">setState(() { //Do Something})</code> to change the state of the widget, it will check for <code class="language-text">dirty</code> elements in the widget and update the build of the widget</p><h2>Flutter Packages</h2><p>Check <a href="https://pub.dev/flutter/packages" target="_blank" rel="nofollow noopener noreferrer">https://pub.dev/flutter/packages</a> for finding flutter packages, later to implement it:</p><p>on <code class="language-text">pubspec.yaml</code></p><div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token comment">//under</span>
+dependencies<span class="token operator">:</span>
+  my_new_package<span class="token operator">:</span> <span class="token operator">^</span><span class="token number">1.0</span><span class="token number">.0</span></code></pre></div><p>just saving the file, Visual Studio Code would installed for you, if you have any issue, use <code class="language-text">flutter pub get</code> to install it.</p><p>later on your dart file, you just need to import it:</p><div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> <span class="token string">&quot;package:my_new_package/my_new_package.dart&quot;</span>
+
+<span class="token comment">// And use it as you wish</span>
+myNewPackage<span class="token punctuation">.</span><span class="token function">dothis</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre></div><h2>Adding Assets and Fonts</h2><div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript">edit file pubspec<span class="token punctuation">.</span>yaml
+
+<span class="token comment">// For setting the images folder,</span>
+<span class="token comment">// you can set individual files too</span>
+assets<span class="token operator">:</span>
+   <span class="token operator">-</span> images<span class="token operator">/</span>
+
+<span class="token comment">// For Fonts with variations</span>
+fonts<span class="token operator">:</span>
+  <span class="token operator">-</span> family<span class="token operator">:</span> Pacifico
+    fonts<span class="token operator">:</span>
+      <span class="token operator">-</span> asset<span class="token operator">:</span> fonts<span class="token operator">/</span>Pacifico<span class="token operator">-</span>Regular<span class="token punctuation">.</span>ttf
+  <span class="token comment">// Regular and Italic</span>
+  <span class="token operator">-</span> family<span class="token operator">:</span> Source Sans Pro
+    fonts<span class="token operator">:</span>
+      <span class="token operator">-</span> asset<span class="token operator">:</span> fonts<span class="token operator">/</span>SourceSansPro<span class="token operator">-</span>Regular<span class="token punctuation">.</span>ttf
+      <span class="token operator">-</span> asset<span class="token operator">:</span> fonts<span class="token operator">/</span>SourceSansPro<span class="token operator">-</span>Italic<span class="token punctuation">.</span>ttf
+        style<span class="token operator">:</span> italic
+  <span class="token comment">// Regular and Bold</span>
+  <span class="token operator">-</span> family<span class="token operator">:</span> Trajan Pro
+    fonts<span class="token operator">:</span>
+      <span class="token operator">-</span> asset<span class="token operator">:</span> fonts<span class="token operator">/</span>TrajanPro<span class="token punctuation">.</span>ttf
+      <span class="token operator">-</span> asset<span class="token operator">:</span> fonts<span class="token operator">/</span>TrajanPro_Bold<span class="token punctuation">.</span>ttf
+        weight<span class="token operator">:</span> <span class="token number">700</span>
+</code></pre></div><h2>When importing a library</h2><p>if you are importing a library with a lof of classes and you want to import only one, you can use <code class="language-text">show</code> like this:</p><div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> <span class="token string">&#x27;dart:io&#x27;</span> show Platform<span class="token punctuation">;</span> <span class="token comment">// only import Platform class from dart:io, then you can use Platform.isIOS</span></code></pre></div><p>you can use <code class="language-text">hide</code> to show all classes in that package but the one hided:</p><div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> <span class="token string">&#x27;dart:io&#x27;</span> hide ProcessInfo<span class="token punctuation">;</span> <span class="token comment">// show all clases but hide ProcessInfo from dart:io</span></code></pre></div><p>also, we can use <code class="language-text">as</code> that will rename the entery package to the name given</p><div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> <span class="token string">&#x27;dart:io&#x27;</span> <span class="token keyword">as</span> myPackage<span class="token punctuation">;</span> <span class="token comment">// now you can reference it as myPackage.MyClass()</span></code></pre></div><h2>Working with lists</h2><p><strong>Note:</strong> Keep in mind that if you are going to add items to an empty list, you have to initialice it with an <code class="language-text">[]</code> value, like this: <code class="language-text">List&lt;Text&gt; myTextList = [];</code>; if you leave the list as null: <code class="language-text">List&lt;Text&gt; myTextList;</code> it may cause bugs when trying to use the <code class="language-text">.add()</code> method in that list.</p><div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token comment">// Declare List</span>
+List<span class="token operator">&lt;</span>Widget<span class="token operator">&gt;</span> myList <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token function">myWidget</span><span class="token punctuation">(</span><span class="token string">&quot;Widget 1&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token function">myWidget</span><span class="token punctuation">(</span><span class="token string">&quot;Widget 2&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span><span class="token punctuation">,</span>
+
+<span class="token comment">// Dynamic List Type:</span>
+List myList <span class="token operator">=</span> <span class="token punctuation">[</span> <span class="token string">&quot;a&quot;</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span>
+
+<span class="token comment">// String List Type:</span>
+List<span class="token operator">&lt;</span>String<span class="token operator">&gt;</span> myStringList <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&quot;a&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;b&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;c&quot;</span><span class="token punctuation">]</span>
+
+<span class="token comment">// Using List</span>
+<span class="token function">Column</span><span class="token punctuation">(</span>
+  Children<span class="token operator">:</span> myList<span class="token punctuation">,</span>
+<span class="token punctuation">)</span><span class="token punctuation">,</span>
+
+<span class="token comment">// Accessing one item</span>
+<span class="token function">print</span><span class="token punctuation">(</span> myStringList<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// c</span>
+
+<span class="token comment">// Finding item</span>
+myStringList<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token string">&quot;a&quot;</span><span class="token punctuation">)</span> <span class="token comment">// 0</span>
+
+<span class="token comment">// Adding things to the list: List.add( ), it will add item in the last position</span>
+<span class="token function">FlatButton</span><span class="token punctuation">(</span>
+  onPressed<span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    myList<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>
+      <span class="token function">myWidget</span><span class="token punctuation">(</span><span class="token string">&quot;Widget 3&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span><span class="token punctuation">,</span>
+
+<span class="token comment">// Insert item in any position, insert(index, element)</span>
+myStringList<span class="token punctuation">.</span><span class="token function">insert</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">&quot;d&quot;</span><span class="token punctuation">)</span> <span class="token comment">// &quot;a&quot;, &quot;d&quot;, &quot;b&quot;, &quot;c&quot;</span>
+
+<span class="token comment">// Get first item and last item</span>
+myStringList<span class="token punctuation">.</span>first
+myStringList<span class="token punctuation">.</span>last
+</code></pre></div><h2>Building a class</h2><p>This is the class, you can create a <code class="language-text">question.dart</code> file, remember classes always start with uppercase</p><div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">class</span> <span class="token class-name">Question</span> <span class="token punctuation">{</span>
+  <span class="token comment">//Properties</span>
+  String questionText<span class="token punctuation">;</span>
+  bool questionAnswer<span class="token punctuation">;</span>
+
+  <span class="token comment">// Constructor</span>
+  <span class="token function">Question</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span>String q<span class="token punctuation">,</span> bool a<span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    questionText <span class="token operator">=</span> q<span class="token punctuation">;</span>
+    questionAnswer <span class="token operator">=</span> a<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// Method</span>
+  <span class="token keyword">void</span> <span class="token function">changeQuestion</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div><p><strong>using the class</strong></p><div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript">  Question q1 <span class="token operator">=</span> <span class="token function">Question</span><span class="token punctuation">(</span>q<span class="token operator">:</span> <span class="token string">&#x27;my question&#x27;</span><span class="token punctuation">,</span> a<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div><p><strong>printing the new object created with the class</strong></p><div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token function">print</span><span class="token punctuation">(</span>q1<span class="token punctuation">.</span>questionText<span class="token punctuation">)</span> <span class="token comment">// my question</span>
+<span class="token function">print</span><span class="token punctuation">(</span>q1<span class="token punctuation">.</span>questionAnswer<span class="token punctuation">)</span> <span class="token comment">// false</span></code></pre></div><p><strong>Creating a list (array) of new Questions <code class="language-text">List&lt;Question&gt;</code></strong></p><div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript">List <span class="token operator">&lt;</span>Question<span class="token operator">&gt;</span> questionBank <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token function">Question</span><span class="token punctuation">(</span><span class="token punctuation">(</span>q<span class="token operator">:</span> <span class="token string">&quot;Question 1&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>a<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token function">Question</span><span class="token punctuation">(</span><span class="token punctuation">(</span>q<span class="token operator">:</span> <span class="token string">&quot;Question 2&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>a<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token function">Question</span><span class="token punctuation">(</span><span class="token punctuation">(</span>q<span class="token operator">:</span> <span class="token string">&#x27;Question 3 with an hi\&#x27;s message&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>a<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+
+<span class="token comment">// Accessing it</span>
+
+questionBank<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>questionText <span class="token comment">// Question 2</span></code></pre></div><h2>More class examples</h2><p>Creating the class</p><div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">class</span> <span class="token class-name">Car</span> <span class="token punctuation">{</span>
+  <span class="token comment">//  Properties</span>
+  int numberOfDoors <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+
+  <span class="token comment">//  Methods</span>
+  <span class="token keyword">void</span> <span class="token function">drive</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">&quot;start running car&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div><p>Creating an object from the class</p><div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript">Car myCar <span class="token operator">=</span> <span class="token function">Car</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div><p>Human class example</p><div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">class</span> <span class="token class-name">Human</span><span class="token punctuation">{</span>
+
+  <span class="token comment">// Properties</span>
+  double height<span class="token punctuation">;</span>
+  int age <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// Constructor</span>
+  <span class="token function">Human</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span>double startingHeight<span class="token punctuation">}</span></span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    height <span class="token operator">=</span> startingHeight<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">//  Method</span>
+  <span class="token keyword">void</span> <span class="token function">talk</span><span class="token punctuation">(</span><span class="token parameter">String whatToSay</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">print</span><span class="token punctuation">(</span>whatToSay<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Using the human class</span>
+Human jonny <span class="token operator">=</span> <span class="token function">Human</span><span class="token punctuation">(</span>startingHeight<span class="token operator">:</span> <span class="token number">15</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">print</span><span class="token punctuation">(</span>jonny<span class="token punctuation">.</span>height<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 15</span>
+jonny<span class="token punctuation">.</span><span class="token function">talk</span><span class="token punctuation">(</span><span class="token string">&quot;Hi There&quot;</span><span class="token punctuation">)</span> <span class="token comment">// Hi There</span>
+
+<span class="token comment">// Change the value of a property</span>
+jonny<span class="token punctuation">.</span>age <span class="token operator">=</span> <span class="token number">11</span><span class="token punctuation">;</span> <span class="token comment">// This happens because the class is not encapsulated and its properties are not private</span>
+
+
+<span class="token comment">// NOTE - If you are going to use the class only one time for example, you can import it an use it like this:</span>
+<span class="token function">Human</span><span class="token punctuation">(</span><span class="token operator">...</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">talk</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h2>Object orientated programming</h2><p>The 4 pilates for (OOP)</p><ul><li>Abstraction<ul><li>Make things modular (no run everything in just one function, method: <code class="language-text">spaghetti code</code>)</li></ul></li><li>Encapsulation</li><li>Inheritance</li><li>Polymorphism</li></ul><h2>Encapsulating a class</h2><div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">class</span> <span class="token class-name">Question</span><span class="token punctuation">{</span>
+  <span class="token comment">// Add an _ before the property name to make it private and only accessible inside the class scope</span>
+  List <span class="token operator">&lt;</span>Question<span class="token operator">&gt;</span> _questionBank <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token function">Question</span><span class="token punctuation">(</span><span class="token punctuation">(</span>q<span class="token operator">:</span> <span class="token string">&quot;Question 1&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>a<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token function">Question</span><span class="token punctuation">(</span><span class="token punctuation">(</span>q<span class="token operator">:</span> <span class="token string">&quot;Question 2&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>a<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token function">Question</span><span class="token punctuation">(</span><span class="token punctuation">(</span>q<span class="token operator">:</span> <span class="token string">&#x27;Question 3 with an hi\&#x27;s message&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>a<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span>
+
+  <span class="token comment">// Make a getter that will return the question text needed</span>
+  String <span class="token function">getQuestionText</span><span class="token punctuation">(</span><span class="token parameter">int questionNumber</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> _questionBank<span class="token punctuation">[</span>questionNumber<span class="token punctuation">]</span><span class="token punctuation">.</span>questionText<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// Getting the question text in a different class</span>
+Question questionList <span class="token operator">=</span> <span class="token function">Question</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+String questionTest <span class="token operator">=</span> questionList<span class="token punctuation">.</span><span class="token function">getQuestionText</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Question 2</span>
+</code></pre></div><h2>Inheritance a class</h2><p>Use <code class="language-text">extends</code> to inherit another class</p><div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">class</span> <span class="token class-name">Car</span> <span class="token punctuation">{</span>
+  int numberOfSeat <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">void</span> <span class="token function">drive</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">&#x27;wheels turn.&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">ElectricCar</span> <span class="token keyword">extends</span> <span class="token class-name">Car</span> <span class="token punctuation">{</span>
+  int batteryLevel <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">void</span> <span class="token function">recharge</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    batteryLevel <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Using Electric car</span>
+ElectricCar myTesla <span class="token operator">=</span> <span class="token function">ElectricCar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+myTesla<span class="token punctuation">.</span><span class="token function">drive</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// wheels turn. // you can see even drive() is not on ElectricCar,</span>
+<span class="token comment">// you can access it because it was extended from Car</span>
+myTesla<span class="token punctuation">.</span><span class="token function">recharge</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment">// you can access the methods defined on ElectricCar as usual.</span>
+</code></pre></div><h2>Polymorphism in a class</h2><p>Basically to override or improve methods from inherited (<code class="language-text">extends</code>) classes using: <code class="language-text">@override</code> &amp; <code class="language-text">super.method()</code></p><div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">class</span> <span class="token class-name">Car</span> <span class="token punctuation">{</span>
+  int numberOfSeat <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">void</span> <span class="token function">drive</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">&#x27;wheels turn.&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// override</span>
+<span class="token keyword">class</span> <span class="token class-name">LevitatingCar</span> <span class="token keyword">extends</span> <span class="token class-name">Car</span><span class="token punctuation">{</span>
+  @override
+  <span class="token keyword">void</span> <span class="token function">drive</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">&quot;glide forwards&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// override and super</span>
+<span class="token keyword">class</span> <span class="token class-name">SelfDrivingCar</span> <span class="token keyword">extends</span> <span class="token class-name">Car</span> <span class="token punctuation">{</span>
+  String destination<span class="token punctuation">;</span>
+
+  <span class="token function">SelfDrivingCar</span><span class="token punctuation">(</span><span class="token parameter">String userDestination</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    destination <span class="token operator">=</span> userDestination<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  @override
+  <span class="token keyword">void</span> <span class="token function">drive</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">drive</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// trigger parent behavior. Because we override it, we called it again to be used in our method</span>
+    <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">&quot;steering towards $destination&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// improve code</span>
+  <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Using them</span>
+LevitatingCar myMagLev <span class="token operator">=</span> <span class="token function">LevitatingCar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+myMagLev<span class="token punctuation">.</span><span class="token function">drive</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// glide forwards -&gt; see how here, even though we extended Car, we don&#x27;t get `wheels turn`</span>
+<span class="token comment">// because we override the drive() method to do wherever new thing we wanted to make it do.</span>
+
+SelfDrivingCar myWaymo <span class="token operator">=</span> <span class="token function">SelfDrivingCar</span><span class="token punctuation">(</span><span class="token string">&quot;Medellin, Colombia&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+myWaymo<span class="token punctuation">.</span><span class="token function">drive</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// (wheels turn.) and (steering towards Medellin, Colombia) -&gt; here, we override it but we call</span>
+<span class="token comment">// the super.drive() to run parent drive code again and we attached our own code too (steering towards...)</span></code></pre></div><h2>Constructors on Dart</h2><div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">class</span> <span class="token class-name">Human</span> <span class="token punctuation">{</span>
+  double height<span class="token punctuation">;</span>
+
+  <span class="token comment">// Constructor</span>
+  <span class="token function">Human</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span>double startingHeight<span class="token punctuation">}</span></span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    height <span class="token operator">=</span> startingHeight<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+Human jonny <span class="token operator">=</span> <span class="token function">Human</span><span class="token punctuation">(</span>startingHeight<span class="token operator">:</span> <span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">print</span><span class="token punctuation">(</span>jonny<span class="token punctuation">.</span>height<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 20</span></code></pre></div><p>Using <code class="language-text">this</code>:</p><div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">class</span> <span class="token class-name">Human</span> <span class="token punctuation">{</span>
+  double height<span class="token punctuation">;</span>
+
+  <span class="token comment">// Constructor</span>
+  <span class="token function">Human</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span>double height<span class="token punctuation">}</span></span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    height <span class="token operator">=</span> height<span class="token punctuation">;</span> <span class="token comment">// will give null</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>height <span class="token operator">=</span> height<span class="token punctuation">;</span> <span class="token comment">// with `this`, it will be access the `double height variable` set before,</span>
+    <span class="token comment">// without it, system will thing we are using the same height set as property in the constructor</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+Human jonny <span class="token operator">=</span> <span class="token function">Human</span><span class="token punctuation">(</span>height<span class="token operator">:</span> <span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">print</span><span class="token punctuation">(</span>jonny<span class="token punctuation">.</span>height<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 20</span></code></pre></div><p><strong>Short hand</strong> and convenient way of setting multiples properties in a constructor</p><div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">class</span> <span class="token class-name">Human</span> <span class="token punctuation">{</span>
+  double height<span class="token punctuation">;</span>
+  int weight<span class="token punctuation">;</span>
+  String name<span class="token punctuation">;</span>
+
+  <span class="token comment">// Constructor</span>
+  <span class="token function">Human</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>height<span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>weight<span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>string<span class="token punctuation">}</span></span><span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+Human jonny <span class="token operator">=</span> <span class="token function">Human</span><span class="token punctuation">(</span>height<span class="token operator">:</span> <span class="token number">20</span><span class="token punctuation">,</span> weight<span class="token operator">:</span> <span class="token number">4</span><span class="token punctuation">,</span> name<span class="token operator">:</span> Jonny<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">print</span><span class="token punctuation">(</span>jonny<span class="token punctuation">.</span>height<span class="token punctuation">,</span> jonny<span class="token punctuation">.</span>weight<span class="token punctuation">,</span> jonny<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 20, 4, Jonny</span></code></pre></div><h2>Themes</h2><p>On an material app</p><div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token function">MaterialApp</span><span class="token punctuation">(</span>
+  theme<span class="token operator">:</span> ThemeData<span class="token punctuation">.</span><span class="token function">dark</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token comment">// default one is ThemeData.light()</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Custom properties</span>
+<span class="token function">MaterialApp</span><span class="token punctuation">(</span>
+  theme<span class="token operator">:</span> <span class="token function">ThemeData</span><span class="token punctuation">(</span>
+    primaryColor<span class="token operator">:</span> <span class="token function">Color</span><span class="token punctuation">(</span><span class="token number">0xFFFF0000</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token comment">// for using HEX colors without alpha in the class Color(),</span>
+    <span class="token comment">// just use 0xFF before the HEX color and that&#x27;s it</span>
+    accentColor<span class="token operator">:</span> Colors<span class="token punctuation">.</span>purple<span class="token punctuation">,</span>
+    scaffoldBackgroundColor<span class="token operator">:</span> Colors<span class="token punctuation">.</span>blue<span class="token punctuation">,</span>
+    textTheme<span class="token operator">:</span> <span class="token function">TextTheme</span><span class="token punctuation">(</span> <span class="token comment">// to change text color, use text theme that has multiple properties to change</span>
+      body1<span class="token operator">:</span> <span class="token function">TextStyle</span><span class="token punctuation">(</span>
+        color<span class="token operator">:</span> Colors<span class="token punctuation">.</span>white<span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div><p>Extending a theme</p><div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token function">MaterialApp</span><span class="token punctuation">(</span>
+  theme<span class="token operator">:</span> ThemeData<span class="token punctuation">.</span><span class="token function">dark</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">copyWith</span><span class="token punctuation">(</span>
+    primaryColor<span class="token operator">:</span> <span class="token function">Color</span><span class="token punctuation">(</span><span class="token number">0xFF0A0E21</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    scaffoldBackgroundColor<span class="token operator">:</span> <span class="token function">Color</span><span class="token punctuation">(</span><span class="token number">0xFF0A0E21</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div><p>Using a different custom theme in a particular widget, wrap it with <code class="language-text">Theme()</code> class and use <code class="language-text">data</code> property</p><div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript">floatingActionButton<span class="token operator">:</span> <span class="token function">Theme</span><span class="token punctuation">(</span>
+  data<span class="token operator">:</span> ThemeData<span class="token punctuation">.</span><span class="token function">light</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token comment">// like this</span>
+  data<span class="token operator">:</span> <span class="token function">ThemeData</span><span class="token punctuation">(</span>accentColor<span class="token operator">:</span> Colors<span class="token punctuation">.</span>red<span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token comment">// or like this, with custom properties</span>
+  child<span class="token operator">:</span> <span class="token operator">...</span>
+<span class="token punctuation">)</span><span class="token punctuation">,</span></code></pre></div><h2>Making a widget reusable</h2><p>if you are repeating yourself a lot of, you can click on a widget, later on the yellow light click <code class="language-text">extract widget</code>, this will create a class with the widget content that you can reuse across the app</p><p><strong>Making the property required in the reusable widget class</strong>
+Note: <code class="language-text">property</code>, <code class="language-text">Instance variable</code> and <code class="language-text">field</code> are the same thing in a class.</p><div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> <span class="token string">&#x27;package:meta/meta.dart&#x27;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">ReusableCard</span> <span class="token keyword">extends</span> <span class="token class-name">StatelessWidget</span> <span class="token punctuation">{</span>
+  <span class="token function">ReusableCard</span><span class="token punctuation">(</span><span class="token punctuation">{</span>@required <span class="token keyword">this</span><span class="token punctuation">.</span>colour<span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>cardChild<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Setting it as required, if we don&#x27;t, it will be optional, but later if</span>
+  <span class="token comment">// a widget don&#x27;t send it and we use it in this class, it will fire null.</span>
+  final Color colour<span class="token punctuation">;</span>
+
+  final Widget cardChild<span class="token punctuation">;</span> <span class="token comment">// this for allowing child inside our custom widget</span>
+
+  @override
+  Widget <span class="token function">build</span><span class="token punctuation">(</span><span class="token parameter">BuildContext context</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">Container</span><span class="token punctuation">(</span>
+      child<span class="token operator">:</span> cardChild<span class="token punctuation">,</span>
+      decoration<span class="token operator">:</span> <span class="token function">BoxDecoration</span><span class="token punctuation">(</span>
+        color<span class="token operator">:</span> colour<span class="token punctuation">,</span>
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Using it</span>
+<span class="token function">Expanded</span><span class="token punctuation">(</span>
+  child<span class="token operator">:</span> <span class="token function">ReusableCard</span><span class="token punctuation">(</span>
+    cardChild<span class="token operator">:</span> <span class="token function">Text</span><span class="token punctuation">(</span><span class="token operator">...</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    colour<span class="token operator">:</span> <span class="token function">Color</span><span class="token punctuation">(</span><span class="token number">0xFFFF0000</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span>
+</code></pre></div><p>if you noticed, we used the <code class="language-text">final</code> keyword in the last class widget, that&#x27;s because we used a <code class="language-text">StatelessWidget</code>, it means it is unchangeable, immutable, so, its values don&#x27;t change, when we &quot;update&quot; a stateless widget, we actually we destroy it and we put/create a new one with different values.</p><p>So, that&#x27;s why we need to use <code class="language-text">final</code> or <code class="language-text">const</code> on StatelessWidget, because its properties can&#x27;t change, because it is immutable.</p><h2>const or final</h2><p><strong>const</strong> is used more for hardcoded things, things that don&#x27;t need the app to be running to be applied, like:</p><div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> int myConst <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> myOtherConst <span class="token operator">=</span> <span class="token number">2</span> <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">;</span></code></pre></div><p>Remember <code class="language-text">const</code> can&#x27;t be reassigned later.</p><p>Also, it is a convention, to call all constants in flutter starting with the letter <code class="language-text">k</code>, so, it will be <code class="language-text">kMyConstant</code>, so every time you type <code class="language-text">k</code>, you fill find your constants and flutter system constants easily, &#x27;cause the last ones are named starting with k too.</p><p><strong>final</strong> is used for things that can be set at the run time of the app, for example when creating a new widget and passing a parameter or something like that</p><div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript">final int myFinal <span class="token operator">=</span> DateTime<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// this needs the app running to get the hour</span>
+final myOtherFinal <span class="token operator">=</span> parameterIgetFromClass<span class="token punctuation">;</span> <span class="token comment">// this needs app running too, when widget it&#x27;s created</span></code></pre></div><h2>Enum</h2><p>it works like models. You have to define them outside a class.</p><p>Enums are very useful when you have more than one option for a property.</p><div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  Car myCar <span class="token operator">=</span> <span class="token function">Car</span><span class="token punctuation">(</span>carStyle<span class="token operator">:</span> CarType<span class="token punctuation">.</span>convertible<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Car</span> <span class="token punctuation">{</span>
+  <span class="token comment">// Defining the class property as an CarType type</span>
+  CarType carStyle<span class="token punctuation">;</span>
+
+  <span class="token function">Car</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>carStyle<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">if</span><span class="token punctuation">(</span>carStyle <span class="token operator">==</span> CarType<span class="token punctuation">.</span>convertible<span class="token punctuation">)</span>
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">enum</span> CarType <span class="token punctuation">{</span>
+  hatchbak<span class="token punctuation">,</span>
+  <span class="token constant">SUV</span><span class="token punctuation">,</span>
+  convertible
+<span class="token punctuation">}</span></code></pre></div><h2>Passing functions as properties</h2><p>We can pass a function as a properties type <code class="language-text">Function</code> like this:</p><div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  Car myCar <span class="token operator">=</span> <span class="token function">Car</span><span class="token punctuation">(</span>drive<span class="token operator">:</span> slowDrive<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  myCar<span class="token punctuation">.</span><span class="token function">drive</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// driving slowly</span>
+  myCar<span class="token punctuation">.</span>drive <span class="token operator">=</span> fastDrive<span class="token punctuation">;</span>
+  myCar<span class="token punctuation">.</span><span class="token function">drive</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// driving super fast</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Car</span> <span class="token punctuation">{</span>
+  <span class="token function">Car</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>drive<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  Function drive<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> <span class="token function">slowDrive</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">&#x27;driving slowly&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> <span class="token function">fastDrive</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">&#x27;driving super fast&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div><h2>Navigation</h2><p><code class="language-text">Navigator.push()</code> is going to push or stack the new screen on the app, it needs the context and the MaterialPageRoute with the info of the new screen to be shown</p><div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript">onTap<span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  Navigator<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span> <span class="token function">MaterialPageRoute</span><span class="token punctuation">(</span>builder<span class="token operator">:</span> <span class="token punctuation">(</span>_<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">myNewScreen</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre></div><p><code class="language-text">Navigator.pop()</code> is going to destroy the active screen and go back to last screen before that one:</p><div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"> onTap<span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  Navigator<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span>context<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span></code></pre></div><p><strong>Named Routes</strong>
+If named routes is going to be used, in the material app, use <code class="language-text">initialRoute</code> and no <code class="language-text">home</code>, also routes is the Map with the list of screens where to navigate.</p><div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token function">MaterialApp</span><span class="token punctuation">(</span>
+  initialRoute<span class="token operator">:</span> <span class="token string">&#x27;/&#x27;</span><span class="token punctuation">,</span>
+  routes<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&#x27;/&#x27;</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">context</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">FirstScreen</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token string">&#x27;/second&#x27;</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">context</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">SecondScreen</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Later using it:</span>
+onPressed<span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  Navigator<span class="token punctuation">.</span><span class="token function">pushNamed</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span> <span class="token string">&#x27;/second&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div><h2>Maps</h2><p>Maps are usefully for saving collections and easily access them by their <code class="language-text">Key</code>, writing a map is as simple as: <code class="language-text">Map&lt;KeyType,ValueType&gt; mapName</code></p><div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token comment">// Defining Map</span>
+Map<span class="token operator">&lt;</span>String<span class="token punctuation">,</span> int<span class="token operator">&gt;</span> phoneBook <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token string">&#x27;Geily&#x27;</span><span class="token operator">:</span> <span class="token number">1234</span><span class="token punctuation">,</span>
+  <span class="token string">&#x27;Jonny&#x27;</span><span class="token operator">:</span> <span class="token number">5432</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// Accesing it</span>
+  phoneBook<span class="token punctuation">[</span><span class="token string">&#x27;Geily&#x27;</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// 1234</span>
+  <span class="token comment">// New Item</span>
+  phoneBook<span class="token punctuation">[</span><span class="token string">&#x27;Son&#x27;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0000</span><span class="token punctuation">;</span>
+  <span class="token comment">// Getting Keys &amp; values</span>
+  <span class="token function">print</span><span class="token punctuation">(</span>phoneBook<span class="token punctuation">.</span>keys<span class="token punctuation">,</span> phoneBook<span class="token punctuation">.</span>values<span class="token punctuation">)</span> <span class="token comment">// Geily, Jonny, Son, 1234, 5432, 0000</span>
+<span class="token punctuation">}</span></code></pre></div><h2>Future, async &amp; await</h2><div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> <span class="token string">&#x27;dart:io&#x27;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">performTasks</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> <span class="token function">performTasks</span><span class="token punctuation">(</span><span class="token punctuation">)</span> async <span class="token punctuation">{</span> <span class="token comment">// async needs to be on the function if we want to use await later</span>
+  <span class="token function">task0</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">task1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  String task2Result <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">task2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// this is going to block main thread because the await</span>
+  <span class="token function">task3</span><span class="token punctuation">(</span>task2Result<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> <span class="token function">task0</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">&#x27;Task 0 complete!&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> <span class="token function">task1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  Duration tenSeconds <span class="token operator">=</span> <span class="token function">Duration</span><span class="token punctuation">(</span>seconds<span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  Future<span class="token punctuation">.</span><span class="token function">delayed</span><span class="token punctuation">(</span>tenSeconds<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// Future is a async function, is not going to block main thread</span>
+                                  <span class="token comment">// unless we ask otherwise with an await.</span>
+    <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">&#x27;Task 1 complete!&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+Future<span class="token operator">&lt;</span>String<span class="token operator">&gt;</span> <span class="token function">task2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> async <span class="token punctuation">{</span><span class="token comment">// Future&lt;String&gt; expects a string, you can leave Future alone to make it any type</span>
+  Duration threeSeconds <span class="token operator">=</span> <span class="token function">Duration</span><span class="token punctuation">(</span>seconds<span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  String result<span class="token punctuation">;</span>
+  <span class="token keyword">await</span> Future<span class="token punctuation">.</span><span class="token function">delayed</span><span class="token punctuation">(</span>threeSeconds<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    result <span class="token operator">=</span> <span class="token string">&#x27;task 2 data&#x27;</span><span class="token punctuation">;</span>
+    <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">&#x27;Task 2 complete&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> <span class="token function">task3</span><span class="token punctuation">(</span><span class="token parameter">String task2Data</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">&#x27;Task 3 complete with $task2Data&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Task 0 complete!   -&gt;  Printed right away</span>
+<span class="token comment">// Task 2 complete    -&gt;  Printed 3 seconds after first one, it BLOCKED main thread</span>
+<span class="token comment">// Task 3 complete with task 2 data   -&gt;  Printed 3 seconds after first one</span>
+<span class="token comment">// Task 1 complete!   -&gt;  Printed 10 seconds after first one, it DID NOT BLOCKED main thread</span>
+</code></pre></div><h2>Common lifecycles of statefull widget</h2><p>initState(), deactivate() and build() are used very common</p><div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">class</span> <span class="token class-name">StateFulCycles</span> <span class="token keyword">extends</span> <span class="token class-name">StatefulWidget</span> <span class="token punctuation">{</span>
+  @override
+  _StateFulCyclesState <span class="token function">createState</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">_StateFulCyclesState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">_StateFulCyclesState</span> <span class="token keyword">extends</span> <span class="token class-name">State</span><span class="token operator">&lt;</span>StateFulCycles<span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+  @override
+  <span class="token keyword">void</span> <span class="token function">initState</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">initState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">&quot;initState, when widget was initialized for the first time, it only gets called one time&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  @override
+  <span class="token keyword">void</span> <span class="token function">deactivate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">deactivate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">&quot;deactivate, when widget was deactivated/destroyed&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  @override
+  Widget <span class="token function">build</span><span class="token punctuation">(</span><span class="token parameter">BuildContext context</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token function">print</span><span class="token punctuation">(</span><span class="token string">&quot;build, when widget is build for first time or rebuild updating the state of it, it&#x27;ll be called repeatedly&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div><h2>Exception Handling</h2><p>Try and catch</p><div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  String myString <span class="token operator">=</span> <span class="token string">&quot;abc&quot;</span><span class="token punctuation">;</span>
+  double myStringAsADouble<span class="token punctuation">;</span>
+
+  <span class="token keyword">try</span> <span class="token punctuation">{</span>
+    myStringAsADouble <span class="token operator">=</span> double<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>myString<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">print</span><span class="token punctuation">(</span>myStringAsADouble <span class="token operator">+</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Doesn&#x27;t print anything</span>
+  <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">print</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// FormatException: Invalid double abc</span>
+    myStringAsADouble <span class="token operator">=</span> <span class="token number">30.0</span><span class="token punctuation">;</span> <span class="token comment">// if string was not able to be converted to double, set it to 30</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">print</span><span class="token punctuation">(</span>myStringAsADouble<span class="token punctuation">)</span> <span class="token comment">// 30</span>
+<span class="token punctuation">}</span></code></pre></div><h2>Null Aware Operators</h2><p><code class="language-text">someVariable ?? defaultValue</code></p><div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token operator">...</span>
+margin<span class="token operator">:</span> EdgeInsets<span class="token punctuation">.</span><span class="token function">all</span><span class="token punctuation">(</span>myStringAsADouble <span class="token operator">??</span> <span class="token number">50.0</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// if `myStringAsADouble` use it, if not, set it to 50.0</span>
+<span class="token operator">...</span></code></pre></div><h2>Networking with http package</h2><p>Doing a <strong>get</strong> request</p><div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> <span class="token string">&#x27;package:http/http.dart&#x27;</span> <span class="token keyword">as</span> http<span class="token punctuation">;</span> <span class="token comment">// install package and import it</span>
+<span class="token keyword">import</span> <span class="token string">&#x27;dart:convert&#x27;</span><span class="token punctuation">;</span> <span class="token comment">// to convert string to json (json parse)</span>
+
+<span class="token keyword">void</span> <span class="token function">getData</span><span class="token punctuation">(</span><span class="token punctuation">)</span> async <span class="token punctuation">{</span>
+  http<span class="token punctuation">.</span>Response response <span class="token operator">=</span> <span class="token keyword">await</span> http<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">&quot;https://myAPI.com&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// get method is the one for getting info from the API</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>response<span class="token punctuation">.</span>statusCode <span class="token operator">==</span> <span class="token number">200</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// status code gives 200, 404.. etc</span>
+    String data <span class="token operator">=</span> response<span class="token punctuation">.</span>body<span class="token punctuation">;</span> <span class="token comment">// this is the response info</span>
+
+    <span class="token function">jsonDecode</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">&quot;user&quot;</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">&quot;name&quot;</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// it will navigate through JSON to {user:{name: &quot;Jonny&quot;}},</span>
+                                      <span class="token comment">// for arrays, use index [0]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div><h2>Passing Data to a State Object</h2><p>if you have some properties that you receive in your widget constructor and you need to pass it to your widget state, you can read it like this <code class="language-text">widget.myProperty</code>:</p><div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">class</span> <span class="token class-name">MyWidget</span> <span class="token keyword">extends</span> <span class="token class-name">StatefulWidget</span> <span class="token punctuation">{</span>
+  <span class="token function">MyWidget</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>myProperty<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  final myProperty<span class="token punctuation">;</span>
+
+  @override
+  _MyWidgetState <span class="token function">createState</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">_MyWidgetState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">_MyWidgetState</span> <span class="token keyword">extends</span> <span class="token class-name">State</span><span class="token operator">&lt;</span>MyWidget<span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+  @override
+  <span class="token keyword">void</span> <span class="token function">initState</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">initState</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">print</span><span class="token punctuation">(</span>widget<span class="token punctuation">.</span>myProperty<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// this will print any value in the widget state that has been passed to the widget constructor or that the widget class has.</span>
+  <span class="token punctuation">}</span>
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span></code></pre></div><h2>Passing Data Backwards Through the Navigation Stack</h2><p>First, we set the parent <code class="language-text">push</code> as variable, so, when the children, on <code class="language-text">pop</code> (close/destroy) send a value, we receive it in the variable:</p><p><strong>Note</strong> Keep in mind that what the <code class="language-text">push</code> will return a <code class="language-text">Future</code>, so, we may need to use an <code class="language-text">async/await</code> to read the value:</p><div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript">
+ onPressed<span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> async <span class="token punctuation">{</span>
+<span class="token keyword">var</span> typedName <span class="token operator">=</span> <span class="token keyword">await</span> Navigator<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span><span class="token function">MaterialPageRoute</span><span class="token punctuation">(</span>builder<span class="token operator">:</span> <span class="token punctuation">(</span>_<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token keyword">return</span> <span class="token function">myNewScreen</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre></div><p>Children <code class="language-text">pop</code>:</p><div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript">Navigator<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span> myVariable<span class="token punctuation">)</span></code></pre></div><h2>Working with Forms</h2><p>The component <code class="language-text">Form()</code> requires an unique <code class="language-text">key</code> that is used to handle the form state</p><div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript">final _formKey <span class="token operator">=</span> GlobalKey<span class="token operator">&lt;</span>FormState<span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Unique id for the form</span>
+FocusNode _passFocus <span class="token operator">=</span> <span class="token function">FocusNode</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">...</span>
+<span class="token function">Form</span><span class="token punctuation">(</span>
+  key<span class="token operator">:</span> _formKey<span class="token punctuation">,</span>
+  child<span class="token operator">:</span> <span class="token function">Column</span><span class="token punctuation">(</span>
+    children<span class="token operator">:</span> <span class="token operator">&lt;</span>Widget<span class="token operator">&gt;</span><span class="token punctuation">[</span>
+      <span class="token function">TextFormField</span><span class="token punctuation">(</span>
+        decoration<span class="token operator">:</span> <span class="token function">InputDecoration</span><span class="token punctuation">(</span>
+          hintText<span class="token operator">:</span> <span class="token function">translate</span><span class="token punctuation">(</span><span class="token string">&#x27;auth.email&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token comment">// Like the placeholder on web</span>
+        <span class="token punctuation">)</span><span class="token punctuation">,</span>
+         <span class="token comment">// Input type email, please not that by default flutter doesn&#x27;t support validation</span>
+         <span class="token comment">// on input type yet, in this case if user write something else different to an email,</span>
+         <span class="token comment">// this will still fire as true</span>
+        keyboardType<span class="token operator">:</span> TextInputType<span class="token punctuation">.</span>emailAddress<span class="token punctuation">,</span>
+        <span class="token comment">// the icon in the keyboard, in this case an arrow -&gt; pointing to next input</span>
+        textInputAction<span class="token operator">:</span> TextInputAction<span class="token punctuation">.</span>next<span class="token punctuation">,</span>
+        <span class="token comment">// when FORM is saved, update _user.email state</span>
+        <span class="token function-variable function">onSaved</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">val</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> _user<span class="token punctuation">.</span>email <span class="token operator">=</span> val<span class="token punctuation">)</span><span class="token punctuation">,</span>
+         <span class="token comment">// what to do after input is submitted,</span>
+        <span class="token comment">// in this case, set focus to next form input</span>
+        onFieldSubmitted<span class="token operator">:</span> <span class="token punctuation">(</span>term<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          _passFocus<span class="token punctuation">.</span><span class="token function">requestFocus</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+
+      <span class="token function">TextFormField</span><span class="token punctuation">(</span>
+          decoration<span class="token operator">:</span> <span class="token function">InputDecoration</span><span class="token punctuation">(</span>
+            hintText<span class="token operator">:</span> <span class="token function">translate</span><span class="token punctuation">(</span><span class="token string">&#x27;auth.password&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+          <span class="token punctuation">)</span><span class="token punctuation">,</span>
+          <span class="token comment">// if we want some other input to focus in this one after it is done</span>
+          <span class="token comment">// we have to add the focusNode name here and then use it in the other input</span>
+          focusNode<span class="token operator">:</span> _passFocus<span class="token punctuation">,</span>
+          <span class="token comment">//Keyboard type Password</span>
+          keyboardType<span class="token operator">:</span> TextInputType<span class="token punctuation">.</span>visiblePassword<span class="token punctuation">,</span>
+          <span class="token comment">// to not show the password when typing</span>
+          obscureText<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+          <span class="token comment">// Keyboard icon set as a checkbox marker</span>
+          textInputAction<span class="token operator">:</span> TextInputAction<span class="token punctuation">.</span>done<span class="token punctuation">,</span>
+          <span class="token comment">// Small validator, if input empty, don&#x27;t submit form</span>
+          validator<span class="token operator">:</span> <span class="token punctuation">(</span>value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>value<span class="token punctuation">.</span>isEmpty<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token string">&quot;Please write your password&quot;</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token comment">// when FORM is saved, update input state</span>
+          <span class="token function-variable function">onSaved</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">val</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> _user<span class="token punctuation">.</span>password <span class="token operator">=</span> val<span class="token punctuation">)</span><span class="token punctuation">,</span>
+          <span class="token comment">// Submit form on input submit</span>
+          onFieldSubmitted<span class="token operator">:</span> <span class="token punctuation">(</span>term<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">_onSubmitForm</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token comment">// Simple button to submit form as well</span>
+      <span class="token function">RaisedButton</span><span class="token punctuation">(</span>
+        onPressed<span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token function">_onSubmitForm</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        child<span class="token operator">:</span> <span class="token function">Text</span><span class="token punctuation">(</span><span class="token string">&quot;Submit&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div><p>and now the form submit function:</p><div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">void</span> <span class="token function">_onSubmitForm</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">//if form is valid</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>_formKey<span class="token punctuation">.</span>currentState<span class="token punctuation">.</span><span class="token function">validate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//This will call all methods onSaved in the form inputs and assign the corresponding value</span>
+    _formKey<span class="token punctuation">.</span>currentState<span class="token punctuation">.</span><span class="token function">save</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// Process form on BE</span>
+   <span class="token function">doWhatYouWantAfterFormIsSubmitted</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div><p><strong>Post in progress...</strong></p></div><div class="blog-post__footer"><div><a href="/blog/category/flutter">Flutter</a> <!-- -->&amp;<!-- --> <a href="/blog/category/cheat-sheet">Cheat Sheet</a></div><div class="mt-2 text-gray-500">2020 / 1 / 11</div><div class="mt-8 md:flex"><div class="mb-4 md:mb-0 text-center"><a href="/blog/nvm"><div><div> <!-- -->&lt;<!-- --> <!-- -->NVM</div></div></a></div><span class="flex-grow hidden md:block"></span><div class="text-center"><a href="/blog/react-basics"><div><div> <!-- -->React Basics<!-- --> <!-- -->&gt;</div></div></a></div></div></div></div></main><div id="contact-me" class="footer container max-w-screen-lg mt-12 px-4"><hr class="footer__divider w-3/4 bg-gray-700 mx-auto {}"/><h5 class="footer__title">Contact Me</h5><form class="footer__form "><div class="footer__form-flex"><input type="text" class="footer__form-name" name="name" placeholder="Name" required=""/><input type="email" class="footer__form-email" name="email" placeholder="Email" required=""/></div><textarea name="message" id="" rows="7" placeholder="Message" required=""></textarea><div class="footer__form-submit-wrapper"><button class="footer__form-submit home__btn btn btn--full " type="submit">Send</button><div class="footer__linkedin"><a href="https://www.linkedin.com/in/jonnyacevedo" target="_blank" rel="nofollow noopener noreferrer"><img src="https://res.cloudinary.com/dl8ynwaiu/image/upload/v1587906079/portfolio/linkedin-icon_zwu4m7.svg" alt="Linkedin Icon"/></a></div></div></form><div class="footer__rights text-center text-gray-600 text-sm pt-2">Copyrights © <!-- -->2022<!-- -->. All rights reserved.</div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script>
+  
+  
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'UA-172915920-1', 'auto', {});
+      
+      
+      
+      
+      
+      }</script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/some-flutter-notes";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-1ca532f105f5f342d7a2.js"],"component---src-layouts-blog-category-js":["/component---src-layouts-blog-category-js-8fdce2b10cdda9f67f9b.js"],"component---src-layouts-blog-list-js":["/component---src-layouts-blog-list-js-38384ecf294217d85257.js"],"component---src-layouts-blog-post-js":["/component---src-layouts-blog-post-js-1a46acb6dcb05e9a30a1.js"],"component---src-pages-404-js":["/component---src-pages-404-js-ed531544adc6692411dd.js"],"component---src-pages-contact-js":["/component---src-pages-contact-js-6139de3099ea9bf87a1a.js"],"component---src-pages-home-js":["/component---src-pages-home-js-52b34e83fad06d5fc230.js"],"component---src-pages-index-js":["/component---src-pages-index-js-46d21c5e9a9e4eb57eab.js"]};/*]]>*/</script><script src="/component---src-layouts-blog-post-js-1a46acb6dcb05e9a30a1.js" async=""></script><script src="/commons-f30d36c3b5dd7c437f7b.js" async=""></script><script src="/app-1ca532f105f5f342d7a2.js" async=""></script><script src="/styles-a8d7dafea8d6423ec243.js" async=""></script><script src="/framework-3c607a9ab5a1c641bbca.js" async=""></script><script src="/webpack-runtime-70424c2a5e394e63a2fa.js" async=""></script></body></html>
